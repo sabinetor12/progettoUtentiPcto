@@ -166,8 +166,8 @@ func main() {
 		return c.JSON(200, users)
 	})
 	e.GET("/users/file", func(c echo.Context) error {
-		file := stampaFIERAAA(getLista())
-		return c.File(file.Name())
+		stampaFIERAAA(getLista())
+		return c.Attachment("file.csv","user.csv")
 	})
 
 	e.Use(middleware.CORS())
