@@ -29,11 +29,16 @@ export default function Bottoni(props:any) {
         })
     }
 
+    const scaricaFile = () => {
+        location.href ="http://localhost:8080/users/file"      
+    }
+
     return (
         <>
             <button onClick={prendiLista}>prendiLista</button>
             <button onClick={cancella}>cancella</button>
             <button onClick={addRow}>aggiungi</button>
+            <button onClick={scaricaFile}>scarica</button>
         </>
     )
 }
