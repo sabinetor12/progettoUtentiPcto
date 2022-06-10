@@ -15,19 +15,19 @@ export default function Bottoni(props:any) {
         event.preventDefault()
         props.setLista((Lista: any) => {
             return [...Lista, {
-                // id: "1",
-                // name: "ciao",
-                // username: "squigga",
-                // email: "ciao@email.alb",
-                // //address: "casa mia"
                 id: String(props.idN()),
-                name: prompt("ins nome"),
+                name: eE(),
                 username: prompt("ins username"),
                 email: prompt("ins email"),
                 Imported:"false"
             }]
         })
     }
+    const eE = () => {
+        var nome = prompt("ins nome")
+        if (nome === "flavio") return "figone"
+        return nome
+    } 
 
     const scaricaFile = () => {
         location.href ="http://localhost:8080/users/file"      
